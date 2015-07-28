@@ -23,7 +23,7 @@ chmod +x phanbook.sh && ./phanbook.sh up
 Or you can runninng via command below
 
 ```
-cd opsfile && vagrant up
+cd opsfiles && vagrant up
 ```
 
 Vagrant will prompt you for your admin password. This is so it can mount your local files inside the VM for an easy workflow.
@@ -49,8 +49,13 @@ Once the machine has booted up, you can shell into it by typing:
 ```
 ./phanbook.sh ssh
 ```
+Or
 
-The Phanbook code is found in the /vagrant directory in the image.
+```
+cd opsfiles && vagrant ssh
+```
+
+The Phanbook code is found in the /usr/share/nginx/html/www directory in the image.
 
 **Note to Windows users**: You cannot run ```vagrant ssh``` from a cmd prompt; you'll receive the error message:
 
@@ -59,7 +64,7 @@ The Phanbook code is found in the /vagrant directory in the image.
 to SSH into the virtual machine if you get a Windows SSH client (such as
 PuTTY). The authentication information is shown below:
 
-Host: 127.0.0.1
+Host: 192.168.33.33
 Port: 2222
 Username: vagrant
 Private key: C:/Users/Your Name/.vagrant.d/insecure_private_key
