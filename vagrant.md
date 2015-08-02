@@ -17,7 +17,7 @@ on Phanbook with:
 When you're ready to start working, boot the VM:
 
 ```
-chmod +x phanbook.sh && ./phanbook.sh up
+chmod +x phanbook && ./phanbook up
 ```
 Or you can runninng via command below
 
@@ -100,5 +100,5 @@ cd opsfiles && vagrant halt
 or you can running 
 
 ```
-./phanbook.sh halt
+./phanbook halt
 ```
