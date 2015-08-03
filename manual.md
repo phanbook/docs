@@ -1,4 +1,4 @@
-## Requirements
+### Requirements
 - PHP 5.4+
 - Phalcon 2.0.x
 - Nginx or Apache
@@ -17,7 +17,8 @@ git clone https://github.com/phanbook/phanbook.git
 
 Adding file following config nginx(/etc/nginx/nginx.conf) for Ubuntu
 
-```server {
+```
+server {
     listen   80;
     server_name localhost;
 
