@@ -29,3 +29,5 @@ Which defauts password mysql is ```password__phanbook``` if you want to change p
 ```
 
 Then you go to the url: http://127.0.0.1
+
+Todo implement docker composer https://docs.docker.com/compose/
