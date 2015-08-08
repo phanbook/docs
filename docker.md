@@ -1,13 +1,13 @@
-# Quickstart Guide: Setup Phanbook with Docker
+# Setup Phanbook with Docker(recommend for production)
 
-You can use Compose to easily run Phanbook in an isolated environment built with Docker containers. But for now just to use our scripts to do that
+You can use Docker compose to easily run Phanbook in an isolated environment built with Docker containers. But for now just to use our scripts to do that
 
 ## Define the project
 
 Download Phanbook into the current directory:
 
 ```
-git clone https://github.com/phanbook/phanbook
+cd /var/www && git clone https://github.com/phanbook/phanbook
 ```
 This will create a directory called phanbook. If you wish, you can rename it to the name of your project.
 
@@ -21,13 +21,9 @@ Then call docker build with the path of your source repository as the argument (
 chmod +x phanbook ./phanbook docker
 ```
 
-Which defauts password mysql is ```password__phanbook``` if you want to change password fo mysql just to running
+Which defauts password mysql is ```password__phanbook``` if you want to change password fo mysql just to open ```opsfile/docker/config.env``` file then edit the password you want to used it
 
-```
-./phanbook.sh docker your_password_mysql
-
-```
 
 Then you go to the url: http://127.0.0.1
 
-Todo implement docker composer https://docs.docker.com/compose/
+If you get something wrong username and password. Just to open ```common/config/config.php``` file and edit it
