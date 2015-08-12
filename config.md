@@ -15,3 +15,25 @@ You just to change  option debug the ```false``` to ```true`` like below
 ```
 
 Also see at https://github.com/phanbook/phanbook/blob/master/common/config/config.example.php#L72
+
+### Github
+
+To authentication via Github you need to created your app on [github](https://github.com/settings/applications/new). Every registered OAuth application is assigned a unique Client ID and Client Secret. The Client Secret should not be shared! That includes checking the string into your repository. See image below
+
+![](../img/github_auth.png)
+
+Then go to ```common/config/config.php``` files change to it, some like:
+
+```
+/**
+ * Your client ID and client secret keys come from
+ *
+ * @link https://github.com/settings/applications/new
+ */
+'github'      => array(
+    'clientId'     => '7c3724d3a593eff3ebef',
+    'clientSecret' => '0dede75fd2351242e51c69b4aa50ce130862ef05',
+    'redirectUri'  => 'http://dev.phanbook.com/auth/github/access_token',
+    'scopes'       => ['user', 'email']
+),
+````
