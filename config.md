@@ -37,3 +37,4 @@ Then go to ```common/config/config.php``` files change to it, some like:
     'scopes'       => ['user', 'email']
 ),
 ````
+Remember you need to change the domain ```http://dev.phanbook.com``` to your domain
