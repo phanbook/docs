@@ -20,7 +20,7 @@ Also see at https://github.com/phanbook/phanbook/blob/master/common/config/confi
 
 To authentication via Github you need to created your app on [github](https://github.com/settings/applications/new). Every registered OAuth application is assigned a unique Client ID and Client Secret. The Client Secret should not be shared! That includes checking the string into your repository. See image below
 
-![](../img/github_auth.png)
+![](/img/github_app.png)
 
 Then go to ```common/config/config.php``` files change to it, some like:
 
