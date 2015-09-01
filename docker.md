@@ -18,12 +18,22 @@ To build an image from a source repository, create a description file called Doc
 Then call docker build with the path of your source repository as the argument (for example .). But with something config the above we make it to scripts file phanbook.sh, so you just to running following the command below:
 
 ```
-chmod +x phanbook ./phanbook docker
+cd phanbook && ./phanbook docker
 ```
 
 Which defauts password mysql is ```password__phanbook``` if you want to change password fo mysql just to open ```opsfile/docker/config.env``` file then edit the password you want to used it
 
+## Get your Droplet’s IP address
 
-Then you go to the url: http://127.0.0.1
+You can run the following command to reveal your server’s IP address.
+
+```
+ifconfig eth0 | grep inet | awk '{ print $2 }' //45.55.32.209
+```
+
+Finish up by visiting your app page (make sure you replace the example ip address with your correct one): http://45.55.32.209. It should look similar to this:
+
+![](/img/docker-demo.png)
+
 
 If you get something wrong username and password. Just to open ```common/config/config.php``` file and edit it
