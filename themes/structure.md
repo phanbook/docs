@@ -72,9 +72,8 @@ Or Volt stynax
 </div>
 
 <div class="footer">{{partial("partials/footer")}}</div>
-
+```
 You can also passing the value to partials, take look example below
-
 
 ```
 <div id="footer">
@@ -82,7 +81,6 @@ You can also passing the value to partials, take look example below
 </div>
 
 ```
-
 
 ### Layouts
 
