@@ -77,8 +77,6 @@ You can also passing the value to partials, take look example below
 
 
 ```
-
-{# Passing extra variables #}
 <div id="footer">
     <div id="footer">{{ partial("partials/footer", ['links': links]) }}</div>
 </div>
