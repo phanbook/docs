@@ -51,6 +51,18 @@ Also, if you want to use array to instead object just convert for it `post.toArr
 
 - Also post have relationship with some object, for example to get information user: `post.user` is object of model Users so that you can gets any properties this model [here](https://github.com/phanbook/phanbook/blob/master/core/common/models/Users.php). Also you can try this for tag `post.tag`
 
+- Note: **post.status** have some type below:
+
+```
+'publish' - A published post or page
+'pending' - post is pending review
+'draft'   - a post in draft status
+'future'  - a post to publish in the future
+'private' - not visible to users who are not logged in
+'trash'   - post is in trash bin.
+
+```
+
 ### Helpers
 
 Tobe update
