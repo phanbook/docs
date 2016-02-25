@@ -1,6 +1,6 @@
 ## Introduction
 
-All of the configuration files for the Phanbook are store in the ```common/config/config.php``` file. So feel free to look through the files and get familiar with the options available to you.
+All of the configuration files for the Phanbook are store in the ```core/config/config.php``` file. So feel free to look through the files and get familiar with the options available to you.
 
 ### Environment Configuration
 
@@ -14,7 +14,7 @@ You just to change  option debug the ```false``` to ```true`` like below
 
 ```
 
-Also see at https://github.com/phanbook/phanbook/blob/master/common/config/config.example.php#L72
+Also see at https://github.com/phanbook/phanbook/blob/master/core/config/config.example.php#L72
 
 ### Github
 
@@ -22,7 +22,7 @@ To authentication via Github you need to created your app on [github](https://gi
 
 ![](/img/github_app.png)
 
-Then go to ```common/config/config.php``` files change to it, some like:
+Then go to ```core/config/config.php``` files change to it, some like:
 
 ```
 /**
