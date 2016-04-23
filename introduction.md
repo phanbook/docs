@@ -1,6 +1,6 @@
 ## Welcome!
 
-Welcome to Phanbook. Our mission is to give you an advanced tool for creatinh fast Questions and Answers websites and also creating blogs easily with PHP.
+Welcome to Phanbook. Our mission is to give you an advanced tool for creating fast Questions and Answers websites and also creating blogs easily with PHP.
 
 
 ### What is Phanbook
