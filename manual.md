@@ -50,42 +50,37 @@ server {
 ```
 ### Create MySQL database 
 
-You need to create database with name phanbook or anything name. Import file databases/phanbook.sql into database if you want to test website or fie databases/phanbook_prd for production
+You need to create database with name phanbook or anything name. Import the file schema/phanbook.sql into database
 
 ```
-mysql -u root -p phanbook < databases/phanbook.sql
+mysql -u root -p schema < schema/phanbook.sql
 ```
 
 ### Config
 
-You need to copy file config.example.php to config.php in folder ```common/config/config.example.php```then edit params of database connection some like 
+You need to copy file .env.example to .env in directory then edit params of database connection some like 
 
 ```
-return new \Phalcon\Config(
-    array(
-    'database'  => array(
-        'mysql'     => array(
-            'host'     => 'localhost',
-            'username' => 'root',
-            'password' => 'phanbook',
-            'dbname'   => 'phanbook',
-            'charset'  => 'utf8',
-        )
-    ),
+DB_USERNAME=phanbook
+DB_PASSWORD=secret
+DB_DATABASE=phanbook
+DB_CHARSET=utf8
+DB_HOST=localhost
+DB_CONNECTION=mysql
+
 ```
 Set permissions for directories and files:
 
 ```
-chmod 777 -R apps/logs
-chmod 777 -R apps/cache/volt
-chmod 777 -R public/uploads
+chmod 777 -R content
+chmod 777 -R public
 ```
 ### Installing vendor
 
 Because we have user some library PHP , so we need to install to Phanbook can working, just to add following command below
 
 ```
-php composer.phar install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader
+composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader
 ```
 ### Username 
 
