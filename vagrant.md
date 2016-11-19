@@ -9,20 +9,20 @@ on Phanbook with:
 1. Install Git: http://git-scm.com/downloads (or [GitHub for Windows](http://windows.github.com/) if you want a GUI). Recommend use github for Windows
 2. Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
 3. Install Vagrant: http://www.vagrantup.com/ (We require Vagrant 1.7.2 or later)
-4. Open a terminal and clone the project: `git clone https://github.com/Phanbook/phanbook.git`
-5. Enter the project directory: `cd Phanbook` (Recommendation Create your workspace directory and clone project there. C:/workspace/phanbook/)
+4. Open a terminal and clone the project: `git clone https://github.com/phanbook/opsfiles.git`
+5. Enter the project directory: `cd opsfiles` (Recommendation Create your workspace directory and clone project there. C:/workspace/opsfiles/)
 
 ### Using Vagrant
 
 When you're ready to start working, boot the VM:
 
 ```
-chmod +x phanbook && ./phanbook up
+chmod +x run && ./run up
 ```
 Or you can runninng via command below
 
 ```
-cd opsfiles && vagrant up
+vagrant up
 ```
 
 Vagrant will prompt you for your admin password. This is so it can mount your local files inside the VM for an easy workflow.
@@ -46,12 +46,12 @@ For example, on Ubuntu, you can install NFS support by installing nfs-kernel-ser
 Once the machine has booted up, you can connecting shell the machine that by typing:
 
 ```
-./phanbook.sh ssh
+./run ssh
 ```
 Or via 
 
 ```
-cd opsfiles && vagrant ssh
+vagrant ssh
 ```
 
 The Phanbook code is found in the /usr/share/nginx/html/www directory in the image.
@@ -94,11 +94,11 @@ git push origin feature/{your-new-branch-name}
 When you're done working on Phanbook, you can shut down Vagrant with:
 
 ```
-cd opsfiles && vagrant halt
+vagrant halt
 ```
 
 or you can running 
 
 ```
-./phanbook halt
+./run halt
 ```
