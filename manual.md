@@ -15,39 +15,9 @@ git clone https://github.com/phanbook/phanbook.git
 
 ## Configuring Nginx for Phanbook
 
-Adding file following config nginx(/etc/nginx/nginx.conf) for Ubuntu
+Go to this [url](https://raw.githubusercontent.com/phanbook/opsfiles/master/templates/nginx/vhost/phanbook.conf) to download nginx config, after that adding file following content(/etc/nginx/nginx.conf)
 
-```
-server {
-    listen   80;
-    server_name localhost;
 
-    index index.php index.html index.htm;
-    set  $root_path '/usr/share/nginx/html/phanbook/public';
-    root $root_path;
-    try_files $uri $uri/ @rewrite;
-
-    location @rewrite {
-        rewrite ^/(.*)$ /index.php?_url=/$1;
-    }
-    location ~ \.php$ {
-        try_files $uri =404;
-        fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass   unix:/var/run/php5-fpm.sock;
-        fastcgi_index  index.php;
-        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-        include fastcgi_params;
-    }
-
-    location ~* ^/(css|img|js|flv|swf|download)/(.+)$ {
-        root $root_path;
-    }
-
-    location ~ /\.ht {
-        deny all;
-    }
-}
-```
 ### Create MySQL database 
 
 You need to create database with name phanbook or anything name. Import the file schema/phanbook.sql into database
@@ -61,6 +31,8 @@ mysql -u root -p schema < schema/phanbook.sql
 You need to copy file .env.example to .env in directory then edit params of database connection some like 
 
 ```
+APP_URL=http://phanbook.dev
+
 DB_USERNAME=phanbook
 DB_PASSWORD=secret
 DB_DATABASE=phanbook
