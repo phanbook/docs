@@ -14,17 +14,18 @@ and then install Phanbook.
 There are a few things that you will need to have set up in order to run
 Phanbook:
 
-- A web server: Apache (with mod_rewrite) or Nginx
+- A web server: Apache (with mod_rewrite) or Nginx.
 - PHP 5.5+ with the following extensions:
 [phalcon](https://docs.phalconphp.com/en/latest/reference/install.html),
-mbstring, pdo_mysql, openssl, json, gd, dom, fileinfo
-- Mysql or MariaDB
-- SSH (command-line) access
+mbstring, pdo_mysql, openssl, json, gd, dom, fileinfo. To see which PHP
+extensions you have enabled, look at the output of phpinfo().
+- Mysql or MariaDB.
+- SSH (command-line) access.
 
 ### Install Phanbook
 
 There are three ways to install Phanbook:
 
-1. Install via [Vagrant](http://phanbook.com/docs/vagrant)
-2. Install via [Docker](http://phanbook.com/docs/docker)
-3. [Manually install](http://phanbook.com/docs/manual)
+1. Install via [Vagrant](http://phanbook.com/docs/vagrant).
+2. Install via [Docker](http://phanbook.com/docs/docker).
+3. [Manually install](http://phanbook.com/docs/manual).
