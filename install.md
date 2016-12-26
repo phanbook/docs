@@ -1,10 +1,14 @@
-## Installation
+## Introduction
 Phanbook is built on the lightning fast PHP framework called Phalcon.
 Implemented as a PHP extension, Phalcon offers dramatically better performance
 and lower overhead than other PHP frameworks.  Installing Phalcon is easy but
-does require that you have root access to your system.  Installation of Phalcon
-is documented
-[here](https://docs.phalconphp.com/en/latest/reference/install.html).
+does require that you have root access to your system.
+
+If you already have a development environment that meets all other System
+Requirements below, you can [install
+Phalcon](https://docs.phalconphp.com/en/latest/reference/install.html).
+and then proceed to install Phanbook.
+
 ### System Requirements
 
 There are a few things that you will need to have set up in order to run
@@ -17,7 +21,9 @@ mbstring, pdo_mysql, openssl, json, gd, dom, fileinfo
 - Mysql or MariaDB
 - SSH (command-line) access
 
-Three ways to install Phanbook:
+### Install Phanbook
+
+There are three ways to install Phanbook:
 
 1. Install via [Vagrant](http://phanbook.com/docs/vagrant)
 2. Install via [Docker](http://phanbook.com/docs/docker)
