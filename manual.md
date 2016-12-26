@@ -1,64 +1,88 @@
-### Requirements
-- PHP 5.4+
-- Phalcon 2.0.x
-- Nginx or Apache
-- MariaDB or Mysql
+These instructions cover installing with MySQL.  You'll need the
+Composer package manager (as detailed below) to complete the installation.
 
-You can see how to install LEMP stack [here](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04) and [Phalcon](https://docs.phalconphp.com/en/latest/reference/install.html)
+### System Requirements
 
-when you have requirements just to clone it from github
+See the [install instructions](docs/install.md) for System Requirements.
+
+### Get the Phanbook code
 
 ```
-cd /usr/share/nginx/html
+cd /var/www
 git clone https://github.com/phanbook/phanbook.git
 ```
 
-## Configuring Nginx for Phanbook
+## Installing with Nginx?
 
-Go to this [url](https://raw.githubusercontent.com/phanbook/opsfiles/master/templates/nginx/vhost/phanbook.conf) to download nginx config, after that adding file following content(/etc/nginx/nginx.conf)
-
+If you are using the Nginx web server, you can [download an Nginx
+config](https://raw.githubusercontent.com/phanbook/opsfiles/master/templates/nginx/vhost/phanbook.conf).
 
 ### Create MySQL database 
 
-You need to create database with name phanbook or anything name. Import the file schema/phanbook.sql into database
+Manually import your starter database from the sql in phanbook/schema: 
 
 ```
-mysql -u root -p schema < schema/phanbook.sql
+cd /var/www/phanbook/schema
+mysql -u root -p
+mysql> create database mydatabase;
+mysql> use mydatabase;
+mysql> source phanbook.sql;
 ```
 
-### Config
+### Configuration
 
-You need to copy file .env.example to .env in directory then edit params of database connection some like 
+Copy phanbook/.env.example to phanbook/.env and then edit the values as needed.
+You will most likely need to set the following:
 
 ```
-APP_URL=http://phanbook.dev
+APP_URL=http://dev.mysite.com
 
-DB_USERNAME=phanbook
-DB_PASSWORD=secret
-DB_DATABASE=phanbook
+DB_USERNAME=myusername
+DB_PASSWORD=mypassword
+DB_DATABASE=mydatabase
 DB_CHARSET=utf8
 DB_HOST=localhost
 DB_CONNECTION=mysql
+```
+
+If you are not connecting with the root database user, you'll want to grant your
+user all privileges on the database:
 
 ```
+mysql -u root -p
+mysql> grant all privileges on mydatabase.* to myusername@localhost identified by
+'password';
+```
+
 Set permissions for directories and files:
 
 ```
-chmod 777 -R content
-chmod 777 -R public
+cd /var/www/phanbook
+chmod 755 -R content
+chmod 755 -R public
 ```
-### Installing vendor
 
-Because we have user some library PHP , so we need to install to Phanbook can working, just to add following command below
+### Installing with Composer
+
+We will use Composer to install Phanbook.  [Get
+composer](https://getcomposer.org/download/).
+
+Once you have Composer installed...
 
 ```
-composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader
+cd /var/www/phanbook
+composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts
+--optimize-autoloader
 ```
-### Username 
 
-Default we have setup a user with
+Done!  You should now have a functional Phanbook site.
+
+### Admin User
+
+After installation, you can log into your site with the admin account:
 
 - Username: admin
 - Password: phanbook
 
-You should change password now
+As soon as you log in, you'll want to change the admin password to something
+unique.
