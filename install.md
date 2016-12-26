@@ -6,8 +6,8 @@ does require that you have root access to your system.
 
 If you already have a development environment that meets all other System
 Requirements below, you can [install
-Phalcon](https://docs.phalconphp.com/en/latest/reference/install.html).
-and then proceed to install Phanbook.
+Phalcon](https://docs.phalconphp.com/en/latest/reference/install.html)
+and then install Phanbook.
 
 ### System Requirements
 
