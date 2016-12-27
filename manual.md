@@ -3,7 +3,7 @@ Composer package manager (as detailed below) to complete the installation.
 
 ### System Requirements
 
-See the [install instructions](install.md) for System Requirements.
+See the [install instructions](install) for System Requirements.
 
 ### Get the Phanbook code
 
