@@ -16,7 +16,7 @@ license](https://github.com/phanbook/phanbook/blob/master/LICENSE.txt).
 ### Development Tasks
 
 Phanbook is pre-release software and code and documentation contributions are
-always welcome. Here is an outline of some top priorities:
+always welcome. Here are some top priorities:
 
 - Backend user administration.
 
