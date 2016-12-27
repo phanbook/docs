@@ -3,7 +3,7 @@ Composer package manager (as detailed below) to complete the installation.
 
 ### System Requirements
 
-See the [install instructions](install.md) for System Requirements.
+See the [install instructions](install) for System Requirements.
 
 ### Get the Phanbook code
 
@@ -19,14 +19,14 @@ config](https://raw.githubusercontent.com/phanbook/opsfiles/master/templates/ngi
 
 ### Create MySQL database 
 
-Manually import your starter database from the sql in phanbook/schema: 
+Manually import your starter database from the source.sql in phanbook/schema: 
 
 ```
 cd /var/www/phanbook/schema
 mysql -u root -p
 mysql> create database mydatabase;
 mysql> use mydatabase;
-mysql> source phanbook.sql;
+mysql> source source.sql;
 ```
 
 ### Configuration
@@ -51,7 +51,7 @@ user all privileges on the database:
 ```
 mysql -u root -p
 mysql> grant all privileges on mydatabase.* to myusername@localhost identified by
-'password';
+'mypassword';
 ```
 
 Set permissions for directories and files:
@@ -64,8 +64,11 @@ chmod 755 -R public
 
 ### Installing with Composer
 
-We will use Composer to install Phanbook.  [Get
-composer](https://getcomposer.org/download/).
+Get Composer...
+
+```
+apt-get install composer
+```
 
 Once you have Composer installed...
 

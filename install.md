@@ -15,10 +15,10 @@ There are a few things that you will need to have set up in order to run
 Phanbook:
 
 - A web server: Apache (with mod_rewrite) or Nginx.
-- PHP 5.5+ with the following extensions:
-[phalcon](https://docs.phalconphp.com/en/latest/reference/install.html),
-mbstring, pdo_mysql, openssl, json, gd, dom, fileinfo. To see which PHP
-extensions you have enabled, look at the output of phpinfo().
+- PHP 5.5+ with the following extensions: 
+mbstring, pdo_mysql, openssl, json, gd, dom, fileinfo and
+[phalcon](https://docs.phalconphp.com/en/latest/reference/install.html). To see
+which PHP extensions you have enabled, look at the output of phpinfo().
 - Mysql or MariaDB.
 - SSH (command-line) access.
 
