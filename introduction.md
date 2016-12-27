@@ -1,56 +1,45 @@
 ## Welcome!
 
-Welcome to Phanbook. Our mission is to give you an advanced tool for creating fast Questions and Answers websites and also creating blogs easily with PHP.
+Phanbook is Q&A Forum software built on the Phalcon framework, so it's
+lightning fast and developer-friendly.  Contribute and track development at
+[https://github.com/phanbook/phanbook](https://github.com/phanbook/phanbook)
 
+Phanbook can also serve as a simple & extensible CMS and blogging platform.
 
-### What is Phanbook
+### Highlights
 
-Phanbook is the next-generation Q&A software. It is an online discussion and question/answer site for professionals and enthusiasts. The name Phanbook means – Phan (Phalcon PHP) book (your notebook).
+- **Fast, simple, extensible and modern.**
 
-The aim of Phanbook is Q&A software, but you can use it to created Forum, Blogging, or CMS that are awesome.
+- **Free and open source.** Phanbook is released under the [GNU General
+license](https://github.com/phanbook/phanbook/blob/master/LICENSE.txt).
 
+### Development Tasks
 
-### Goals
+Phanbook is pre-release software and code and documentation contributions are
+always welcome. Here is an outline of some top priorities:
 
-- **Fast and simple.** No clutter, no bloat, no complex dependencies. Phanbook is built with Phalcon PHP so it is quick and easy to deploy. 
+- Backend user administration.
 
-- **Beautiful and responsive.** This is Q&A software for humans. Phanbook is carefully designed to be consistent and intuitive across platforms, out-of-the-box.
+- Define user privileges.
 
-- **Powerful and extensible.** Customize, extend, and integrate Phanbook to suit your community. Phanbook's architecture is amazingly flexible, prioritizing comprehensive APIs and great documentation.  
+- Single sign-on (Facebook, Google, GitHub, etc).
 
-- **Easily deploy** With Docker and Vagrant you can easy deploy.  You can use Docker to deploy to production and with Vagrant you can setupa development environment.
+- Reputation system.  Users accrue points by posting questions, giving correct
+answers, etc.
 
-- **Blogging** Create a beautiful, independent online publications.
+- Grant users greater privileges based on points accrued.
 
-- **Free and open.** Phanbook is released under the [GNU General license](https://github.com/phanbook/phanbook/blob/master/LICENSE.txt).
+- Markdown.
 
-### Features
+- Post flagging/reporting and an intelligent auto-moderation system.
 
-We want Phanbook to be the most powerful Q&A software out there, and we have a huge list of ideas that we want to implement. It will take more time, but Phanbook’s flexible plugin system will mean we can release early and often. Here is a snapshot of what we will be working on first:
+- Powerful search with Elasticsearch.
 
-- Multiple Themes
+- Topic/Tag subscriptions and digest emails.
 
-- Spam Blocking
+- File attachments.
 
-- Markdown and rich text editing support
-
-- Powerful search with Elasticsearch
-
-- Single sign-on (Facebook, Google, GitHub, et al.)
-
-- Topic/Tags subscriptions and digest emails
-
-- File attachments
-
-- Post flagging/reporting and an intelligent auto-moderation system
-
-- Rewards, badges, and gamification
-
-- Q&A format and voting
-
-- Simple CMS and Blogging plaform
-
-- The modular structure with a convenient hierarchy that is based on namespaces
+- Simple CMS and Blogging plaform.
 
 
 ### Core Team
@@ -63,8 +52,5 @@ __( in order of occurrence in the project )__
 * Thien Tran 		[duythien](https://github.com/duythien)
 * Serghei Iakovlev 	[sergeyklay](https://github.com/sergeyklay)
 
-Now that you're here, why not start contributing as well? :) Issues and pull requests are always welcome.
-
-### Note
-
-Phanbook is not only about performance; our goal is to make it robust, rich in features, and easy to use!
+Now that you're here, why not start contributing as well? :) [Issues and pull
+requests](https://github.com/phanbook/phanbook) are always welcome.
