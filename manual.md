@@ -35,13 +35,13 @@ Copy phanbook/.env.example to phanbook/.env and then edit the values as needed.
 You will most likely need to set the following:
 
 ```
-APP_URL=http://dev.mysite.com
+APP_URL="http://dev.mysite.com"
 
 DB_USERNAME=myusername
 DB_PASSWORD=mypassword
 DB_DATABASE=mydatabase
 DB_CHARSET=utf8
-DB_HOST=localhost
+DB_HOST=127.0.0.1
 DB_CONNECTION=mysql
 ```
 
@@ -50,7 +50,7 @@ user all privileges on the database:
 
 ```
 mysql -u root -p
-mysql> grant all privileges on mydatabase.* to myusername@localhost identified by
+mysql> grant all privileges on mydatabase.* to myusername@127.0.0.1 identified by
 'password';
 ```
 
@@ -71,8 +71,7 @@ Once you have Composer installed...
 
 ```
 cd /var/www/phanbook
-composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts
---optimize-autoloader
+composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader
 ```
 
 Done!  You should now have a functional Phanbook site.
@@ -81,8 +80,8 @@ Done!  You should now have a functional Phanbook site.
 
 After installation, you can log into your site with the admin account:
 
-- Username: admin
-- Password: phanbook
+- Username: `admin`
+- Password: `phanbook`
 
 As soon as you log in, you'll want to change the admin password to something
 unique.
