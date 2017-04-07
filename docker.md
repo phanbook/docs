@@ -7,7 +7,7 @@ You can use Docker compose to easily run Phanbook in an isolated environment bui
 Download Phanbook into the current directory:
 
 ```
-cd /var/www && git clone https://github.com/phanbook/phanbook
+cd /var/www && git clone https://github.com/phanbook/docker
 ```
 This will create a directory called phanbook. If you wish, you can rename it to the name of your project.
 
@@ -18,10 +18,10 @@ To build an image from a source repository, create a description file called Doc
 Then call docker build with the path of your source repository as the argument (for example .). But with something config the above we make it to scripts file phanbook.sh, so you just to running following the command below:
 
 ```
-cd phanbook && ./phanbook docker
+cd docker && chmod +x && ./run.sh
 ```
 
-Which defauts password mysql is ```password__phanbook``` if you want to change password fo mysql just to open ```opsfile/docker/config.env``` file then edit the password you want to used it
+Which defauts password mysql is ```secret``` if you want to change password fo mysql just to open ```variables.env``` file then edit the password you want to used it
 
 ## Get your Droplet’s IP address
 
@@ -36,4 +36,4 @@ Finish up by visiting your app page (make sure you replace the example ip addres
 ![](/img/docker-demo.png)
 
 
-If you get something wrong username and password. Just to open ```common/config/config.php``` file and edit it
+If you get something wrong username and password. Just to open ```phanbook/.env``` file and edit it
