@@ -18,7 +18,7 @@ To build an image from a source repository, create a description file called Doc
 Then call docker build with the path of your source repository as the argument (for example .). But with something config the above we make it to scripts file run.sh(Linux/Unix) and run.bat(Window), so you just to running following the command below:
 
 ```
-cd phanbook && chmod +x run.sh && ./run.sh
+cd phanbook && chmod +x run.sh && ./run.sh build
 ```
 After that waiting a few minute to pull some image docker and it will create some conatiner. Finaly you need install vendor and database just with command below:
 
