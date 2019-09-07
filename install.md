@@ -26,6 +26,5 @@ extensions you have enabled, look at the output of phpinfo().
 
 There are three ways to install Phanbook:
 
-1. Install via [Vagrant](http://phanbook.com/docs/vagrant).
-2. Install via [Docker](http://phanbook.com/docs/docker).
-3. [Manually install](http://phanbook.com/docs/manual).
+2. Install via [Docker](./docker.md).
+3. [Manually install](./manual).
